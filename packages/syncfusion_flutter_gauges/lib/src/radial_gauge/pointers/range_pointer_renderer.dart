@@ -562,9 +562,7 @@ class RenderRangePointer extends RenderBox {
   /// Returns the paint for the pointer.
   Paint _getPointerPaint(Rect rect, bool isFill) {
     final Paint paint = Paint()
-      ..color = color ??
-          gaugeThemeData.rangePointerColor ??
-          _themeData.colorScheme.secondaryVariant.withOpacity(0.8)
+      ..color = color ?? gaugeThemeData.rangePointerColor ?? Colors.red
       ..strokeWidth = _actualRangeThickness
       ..style = isFill ? PaintingStyle.fill : PaintingStyle.stroke;
 
